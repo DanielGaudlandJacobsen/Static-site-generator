@@ -2,7 +2,7 @@ import os
 import shutil
 
 from static_mover import static_mover
-from page_generator import generate_page
+from page_generator import generate_pages_recursive
 
 
 current_path = os.path.abspath(__file__)
@@ -19,6 +19,6 @@ content_path = os.path.abspath(content)
 
 def main():
     static_mover(source_path, destination_path)
-    generate_page(content_path, template_path, destination_path)
+    generate_pages_recursive(content_path, template_path, destination_path)
 
 main()
